@@ -30,6 +30,7 @@ public class StepDefinitions {
     public void beforeStep() throws InterruptedException {
         Thread.sleep(2000);
     }
+
     @Given("^the user navigates to (.*)$")
     public void theUserNavigatesToHttpsWwwGroceryCrudComDemoBootstrapTheme(String url) {
         driver.get(url);
