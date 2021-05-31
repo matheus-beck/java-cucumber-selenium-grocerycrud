@@ -133,7 +133,7 @@ public class StepDefinitions {
 
     @And("a popup confirming the delete operation shows up")
     public void aPopupConfirmingTheDeleteOperationShowsUp() {
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-footer > button.btn.btn-danger.delete-multiple-confirmation-button")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-body > p.alert-delete-multiple")));
         Assert.assertTrue(driver.findElement(By.cssSelector("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-body > p.alert-delete-multiple")).getText().contains("Are you sure that you want to delete"));
 
         logger.info("Popup confirming delete operation appeared with success");
