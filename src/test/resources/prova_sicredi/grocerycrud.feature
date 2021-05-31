@@ -25,6 +25,7 @@ Feature: Grocery CRUD web page automation
     And the user searches for the recent created customer
     And the user select the check box of that customer
     And the user clicks on the button "Delete"
-    And the user clicks on the button Delete inside the popup that shows up
+    And a popup confirming the delete operation shows up
+    And the user clicks on the button "Delete inside the popup"
     Then a message saying that the customer was deleted with success is raised
     And the browser is closed

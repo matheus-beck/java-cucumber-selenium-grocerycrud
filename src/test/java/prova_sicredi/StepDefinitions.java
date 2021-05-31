@@ -1,6 +1,7 @@
 package prova_sicredi;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,6 +26,10 @@ public class StepDefinitions {
     WebDriverWait wait = new WebDriverWait(driver, 10);
     private static final Logger logger = Logger.getLogger(StepDefinitions.class.getName());
 
+    @BeforeStep
+    public void beforeStep() throws InterruptedException {
+        Thread.sleep(2000);
+    }
     @Given("^the user navigates to (.*)$")
     public void theUserNavigatesToHttpsWwwGroceryCrudComDemoBootstrapTheme(String url) {
         driver.get(url);
@@ -43,8 +48,7 @@ public class StepDefinitions {
     }
 
     @And("the user clicks on the button {string}")
-    public void theUserClicksOnButton(String buttonName) throws InterruptedException {
-        Thread.sleep(2000);
+    public void theUserClicksOnButton(String buttonName) {
         switch (buttonName){
             case "Add Customer":
                 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#gcrud-search-form > div.header-tools > div.floatL.t5 > a")));
@@ -62,6 +66,10 @@ public class StepDefinitions {
                 wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#gcrud-search-form > div.scroll-if-required > table > thead > tr.filter-row.gc-search-row > td.no-border-left > div.floatL > a")));
                 driver.findElement(By.cssSelector("#gcrud-search-form > div.scroll-if-required > table > thead > tr.filter-row.gc-search-row > td.no-border-left > div.floatL > a")).click();
                 break;
+            case "Delete inside the popup":
+                wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-footer > button.btn.btn-danger.delete-multiple-confirmation-button")));
+                driver.findElement(By.cssSelector("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-footer > button.btn.btn-danger.delete-multiple-confirmation-button")).click();
+                break;
             default:
                 throw new IllegalStateException("Unexpected button: " + buttonName);
         }
@@ -70,8 +78,7 @@ public class StepDefinitions {
     }
 
     @And("the user fills the form with the following values")
-    public void theUserFillsTheFormWithTheFollowingValues(DataTable parametersDataTable) throws InterruptedException {
-        Thread.sleep(5000);
+    public void theUserFillsTheFormWithTheFollowingValues(DataTable parametersDataTable) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("field-customerName")));
 
         List<Map<String, String>> parametersList = parametersDataTable.asMaps(String.class, String.class);
@@ -112,38 +119,28 @@ public class StepDefinitions {
     }
 
     @And("the user searches for the recent created customer")
-    public void theUserSearchesForTheRecentCreatedCustomer() throws InterruptedException {
-        Thread.sleep(2000);
+    public void theUserSearchesForTheRecentCreatedCustomer() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("customerName")));
         driver.findElement(By.name("customerName")).sendKeys(parametersMap.get("first name"));
     }
 
     @And("the user select the check box of that customer")
-    public void theUserCheckTheCheckBoxOfThatCustomer() throws InterruptedException {
-        Thread.sleep(2000);
+    public void theUserSelectTheCheckBoxOfThatCustomer() throws InterruptedException {
         driver.findElement(By.className("select-all-none")).click();
         Thread.sleep(2000);
         driver.findElement(By.className("select-all-none")).click();
     }
 
-    @And("a popup confirming that the user wants to delete this item shows up")
-    public void aPopupConfirmingThatTheUserWantsToDeleteThisItemShowsUp() throws InterruptedException {
-        Thread.sleep(2000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-footer > button.btn.btn-danger.delete-multiple-confirmation-button")));
-        driver.findElement(By.cssSelector("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-footer > button.btn.btn-danger.delete-multiple-confirmation-button")).click();
-    }
-
-    @And("the user clicks on the button Delete inside the popup that shows up")
-    public void theUserClicksOnTheButtonInsideThePopup() throws InterruptedException {
-        Thread.sleep(2000);
+    @And("a popup confirming the delete operation shows up")
+    public void aPopupConfirmingTheDeleteOperationShowsUp() {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-footer > button.btn.btn-danger.delete-multiple-confirmation-button")));
         Assert.assertTrue(driver.findElement(By.cssSelector("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-body > p.alert-delete-multiple")).getText().contains("Are you sure that you want to delete"));
-        driver.findElement(By.cssSelector("body > div.container-fluid.gc-container > div.row > div.delete-multiple-confirmation.modal.fade.in.show > div > div > div.modal-footer > button.btn.btn-danger.delete-multiple-confirmation-button")).click();
+
+        logger.info("Popup confirming delete operation appeared with success");
     }
 
     @Then("a message saying that the customer was deleted with success is raised")
-    public void aMessageSayingThatTheCustomerWasDeletedWithSuccessIsRaised() throws InterruptedException {
-        Thread.sleep(2000);
+    public void aMessageSayingThatTheCustomerWasDeletedWithSuccessIsRaised() {
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.alert.alert-success.growl-animated.animated.bounceInDown")));
         Assert.assertTrue(driver.findElement(By.cssSelector("body > div.alert.alert-success.growl-animated.animated.bounceInDown")).getText().contains("Your data has been successfully deleted from the database"));
 
