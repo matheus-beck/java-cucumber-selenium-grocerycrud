@@ -5,7 +5,7 @@
 </div>
 <br>
 
-Test Automation of [this web page](https://www.grocerycrud.com/demo/bootstrap_theme) using Java, Cucumber, and Selenium.
+Test Automation of [this bootstrap web page](https://www.grocerycrud.com/demo/bootstrap_theme) using Java, Cucumber, and Selenium.
 
 The features of the tests are inside `src/test/resources/prova_sicredi/grocerycrud.feature` and the step definitions are inside `src/test/java/prova_sicredi/StepDefinitions.java`
 
