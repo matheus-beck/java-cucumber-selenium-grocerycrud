@@ -1,17 +1,18 @@
 # 💻 QA Java, Cucumber and Selenium Challenge
 
 <div align="center">
-  <img alt="ibm logo" width="20%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1000px-IBM_logo.svg.png">
+  <img alt="grocerycrud logo" width="30%" src="grocerycrud-cover.png">
 </div>
 <br>
 
-Test Automation of [this web page](https://www.grocerycrud.com/demo/bootstrap_theme) using Java, Cucumber, and Selenium for the tech QA challenge from [IBM](https://www.ibm.com/). 
+Test Automation of [this web page](https://www.grocerycrud.com/demo/bootstrap_theme) using Java, Cucumber, and Selenium.
 
 The features of the tests are inside `src/test/resources/prova_sicredi/grocerycrud.feature` and the step definitions are inside `src/test/java/prova_sicredi/StepDefinitions.java`
 
 ## 📅 Test execution report
 ![Cucumber report](cucumber_report.png)
-- [Link to test execution report](Test_Results_Feature__grocerycrud.html)
+- [Link to test execution report HTML](Test_Results_Feature__grocerycrud.html)
+- [Link to test execution report PDF](Test_Results_Feature_grocerycrud.pdf)
 
 ## 💾 Development Dependencies Used
 
