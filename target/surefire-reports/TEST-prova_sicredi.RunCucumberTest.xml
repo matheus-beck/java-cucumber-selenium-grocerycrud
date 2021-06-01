@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="prova_sicredi.RunCucumberTest" time="12.956" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="prova_sicredi.RunCucumberTest" time="68.652" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.9.1+12-LTS"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.9_12\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\w503340\Documents\prova_sicredi"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/Users/w503340/Documents/prova_sicredi"/>
     <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -26,23 +26,23 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin\..\bin\m2.conf"/>
+    <property name="classworlds.conf" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.9_12\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Ruby27-x64\bin;C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Amazon Corretto\jdk11.0.9_12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files (x86)\CheckPoint\Endpoint Security\Endpoint Common\bin;C:\Program Files\PuTTY\;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\w503340\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\chocoportable\bin;C:\Users\w503340\AppData\Local\Programs\Git\cmd;C:\Program Files\Amazon Corretto\jdk11.0.9_12\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin;;C:\Users\w503340\AppData\Roaming\npm;."/>
-    <property name="maven.conf" value="C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin\../conf"/>
+    <property name="java.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.9_12\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\w503340\bin;C:\Users\w503340\AppData\Local\Programs\Git\mingw64\bin;C:\Users\w503340\AppData\Local\Programs\Git\usr\local\bin;C:\Users\w503340\AppData\Local\Programs\Git\usr\bin;C:\Users\w503340\AppData\Local\Programs\Git\usr\bin;C:\Users\w503340\AppData\Local\Programs\Git\mingw64\bin;C:\Users\w503340\AppData\Local\Programs\Git\usr\bin;C:\Users\w503340\bin;C:\Ruby27-x64\bin;C:\Python39\Scripts;C:\Python39;C:\Program Files\Amazon Corretto\jdk11.0.9_12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files (x86)\CheckPoint\Endpoint Security\Endpoint Common\bin;C:\Program Files\PuTTY;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Users\w503340\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\chocoportable\bin;C:\Users\w503340\AppData\Local\Programs\Git\cmd;C:\Program Files\Amazon Corretto\jdk11.0.9_12\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\bin;C:\Users\w503340\AppData\Roaming\npm;C:\Users\w503340\AppData\Local\Programs\Git\usr\bin\vendor_perl;C:\Users\w503340\AppData\Local\Programs\Git\usr\bin\core_perl;."/>
+    <property name="maven.conf" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="55.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin\..\lib\jansi-native"/>
+    <property name="library.jansi.path" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3/lib/jansi-native"/>
     <property name="user.home" value="C:\Users\w503340"/>
     <property name="user.timezone" value="America/Bahia"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.specification.version" value="11"/>
     <property name="user.name" value="W503340"/>
-    <property name="java.class.path" value="C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.class.path" value="C:/ProgramData/chocolatey/lib/maven/apache-maven-3.6.3/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
@@ -53,17 +53,16 @@
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.version" value="11.0.9.1"/>
     <property name="java.vendor" value="Amazon.com Inc."/>
-    <property name="sun.stderr.encoding" value="cp437"/>
-    <property name="maven.home" value="C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin\.."/>
+    <property name="maven.home" value="C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3"/>
     <property name="file.separator" value="\"/>
     <property name="java.version.date" value="2020-11-04"/>
     <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-11/issues/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Corretto-11.0.9.12.1"/>
-    <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Grocery CRUD web page automation" name="Create new user with success" time="12.956"/>
+  <testcase classname="Grocery CRUD web page automation" name="Create new user with success (Challenge 1)" time="29.13"/>
+  <testcase classname="Grocery CRUD web page automation" name="Create new user with success (Challenge 2)" time="39.522"/>
 </testsuite>
