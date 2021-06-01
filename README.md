@@ -1,4 +1,4 @@
-# 💻 QA Java, Cucumber and Selenium Challenge
+# 👨‍💻 QA Java, Cucumber and Selenium Challenge
 
 <div align="center">
   <img alt="grocerycrud logo" width="30%" src="grocerycrud-cover.png">
